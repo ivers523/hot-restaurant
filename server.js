@@ -17,17 +17,17 @@ app.use(express.json());
 // Routes
 // =============================================================
 
-// Basic route that sends the user first to the AJAX Page
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "home.html"));
+// Basic route that sends the user first to each page
+app.get("", function(req, res) {
+  res.sendFile(path.join(__dirname, "/home.html"));
 });
 
 app.get("/tables", function(req, res) {
-  res.sendFile(path.join(__dirname, "tables.html"));
+  res.sendFile(path.join(__dirname, "/tables.html"));
 });
 
 app.get("/reserve", function(req, res) {
-  res.sendFile(path.join(__dirname, "reservation.html"));
+  res.sendFile(path.join(__dirname, "/reservation.html"));
 });
 
 
